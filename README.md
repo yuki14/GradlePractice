@@ -36,7 +36,7 @@ Gradleの設定の練習用リポジトリ。
 それぞれ別の機能を作ることが可能。ビルド後のapkに他のフレーバーのソースは入りません。
 
 build.gradle(:app)
-
+```
 flavorDimensions "flavor"
     productFlavors {
         first_flavor_1 {
@@ -72,6 +72,7 @@ dependencies {
     second_flavor_1Api project(path: ':SecondFlavor')
     second_flavor_2Api project(path: ':SecondFlavor')
 }
+```
 
 build.gradle(:FirstFlavor)
 appのgradleで定義されたものの中からFirstFlavor用のものだけ定義。
@@ -158,6 +159,7 @@ Ext:
 gradleファイルが複数になってしまったためおまじないのように使う設定に関しては一つにまとめたいと思います。
 Java1.8を使う場合、下記の記述を行う必要があります。（Java1.8はコードの記述を楽にしてくれる-ktx系やWorkManagerなどで必要なので出番が多いです）
 
+```
 android {
       ...
       // Configure only for each module that uses Java 8
@@ -172,6 +174,7 @@ android {
         jvmTarget = "1.8"
       }
     }
+```
     
 モジュールを作るたびにこの記述をするのは少々面倒くさいと思います。忘れた場合にエラーを確認するのも少々面倒くさいです。
 なので一つにまとめます。下記の記述でまとめることに成功しました。
