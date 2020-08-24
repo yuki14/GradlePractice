@@ -76,6 +76,7 @@ dependencies {
 build.gradle(:FirstFlavor)
 appのgradleで定義されたものの中からFirstFlavor用のものだけ定義。
 
+```
 buildTypes {
         release {
             minifyEnabled false
@@ -101,10 +102,12 @@ buildTypes {
             buildConfigField("String", "from", "\"first_flavor_2\"")
         }
     }
+```
 
 build.gradle(:SecondFlavor)
 appのgradleで定義されたものの中からSecondFlavor用のものだけ定義。
 
+```
 buildTypes {
         release {
             minifyEnabled false
@@ -128,7 +131,8 @@ buildTypes {
             buildConfigField("String", "from", "\"second_flavor_2\"")
         }
     }
-    
+```
+
 これでBuildVariantにBuildTypeとFlavorの組み合わせでアプリが選択できます。FirstFlavor関連を選んだ場合、SecondFlavorはFirstFlavorを持っていないためビルドに含まれません。
 ![GradlePractice  CUsersuserAndroidStudioProjectsGradlePractice  -  appsrcfirst_flavor_2reslayoutactivity_main xml  GradlePractice app  - Android Studio 20200816 234733](https://user-images.githubusercontent.com/37768294/91020168-1779da80-e62d-11ea-8ff9-73598f2ea11f.png)
 
