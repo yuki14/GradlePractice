@@ -1,0 +1,4 @@
+include ':SecondFlavor'
+include ':FirstFlavor'
+include ':app'
+rootProject.name = "GradlePractice"
